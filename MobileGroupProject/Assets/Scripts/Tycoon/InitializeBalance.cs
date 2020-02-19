@@ -9,6 +9,21 @@ public class InitializeBalance : MonoBehaviour
 
     void Update()
     {
-        balanceText.text = "$" + PlayerPrefs.GetFloat("currentMoney");
+        if (PlayerPrefs.GetFloat("currentMoney") > 999999999999f)
+        {
+            balanceText.text = "$" + (Mathf.RoundToInt(PlayerPrefs.GetFloat("currentMoney") / 10000000000)) / 100 + " trillion";
+        }
+        else if (PlayerPrefs.GetFloat("currentMoney") > 999999999f)
+        {
+            balanceText.text = "$" + (Mathf.RoundToInt(PlayerPrefs.GetFloat("currentMoney") / 10000000)) / 100 + " billion";
+        }
+        else if(PlayerPrefs.GetFloat("currentMoney") > 999999f)
+        {
+            balanceText.text = "$" + (Mathf.RoundToInt(PlayerPrefs.GetFloat("currentMoney") / 10000)) /100 + " million";
+        }
+        else
+        {
+            balanceText.text = "$" + PlayerPrefs.GetFloat("currentMoney");
+        }
     }
 }

@@ -40,7 +40,7 @@ public class Bepis : MonoBehaviour
         }
     }
 
-    public void PurchaseBank()
+    public void PurchaseBepis()
     {
         if (PlayerPrefs.GetFloat("currentMoney") < bepisCost && PlayerPrefs.GetInt("ownBepis") == 0)
         {
@@ -60,13 +60,20 @@ public class Bepis : MonoBehaviour
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - bepisCost);
             ownership.text = "Congradulations! You now own Bepis.";
             textActive = true;
-            PlayerPrefs.SetInt("ownBepis", 1);
         }
     }
 
     void RunBepis()
     {
-        Debug.Log("$500 collected");
+        if (PlayerPrefs.GetInt("bepisBad") == 1)
+        {
+            bepisMoney = 700f;
+        }
+        if (PlayerPrefs.GetInt("bepisGood") == 1)
+        {
+            timerPrinciple = 3.5f;
+        }
+
         timer = timerPrinciple;
         PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") + bepisMoney);
     }

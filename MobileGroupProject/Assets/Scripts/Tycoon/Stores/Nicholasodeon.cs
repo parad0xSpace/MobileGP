@@ -60,7 +60,6 @@ public class Nicholasodeon : MonoBehaviour
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - nickCost);
             ownership.text = "Congradulations! You now own Nickolasodeon.";
             textActive = true;
-            PlayerPrefs.SetInt("ownNick", 1);
         }
     }
 

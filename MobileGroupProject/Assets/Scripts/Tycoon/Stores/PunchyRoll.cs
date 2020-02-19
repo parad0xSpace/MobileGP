@@ -61,7 +61,6 @@ public class PunchyRoll : MonoBehaviour
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - punchyRollCost);
             ownership.text = "Congradulations! You now own PunchyRoll.";
             textActive = true;
-            PlayerPrefs.SetInt("ownPunchyRoll", 1);
         }
     }
 

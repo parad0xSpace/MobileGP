@@ -1,0 +1,242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7693290523440478626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7693290523440478612}
+  - component: {fileID: 7693290523440478613}
+  - component: {fileID: 7693290523440478614}
+  - component: {fileID: 7693290523440478624}
+  - component: {fileID: 7693290523440478625}
+  - component: {fileID: 7693290523440478621}
+  - component: {fileID: 7693290523440478622}
+  - component: {fileID: 7693290523440478623}
+  - component: {fileID: 7693290523440478616}
+  - component: {fileID: 7693290523440478617}
+  - component: {fileID: 7693290523440478618}
+  - component: {fileID: 7693290523440478619}
+  - component: {fileID: 7693290523440478620}
+  m_Layer: 0
+  m_Name: MoneyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7693290523440478612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7693290523440478613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70470e32ee93c5418fc0ccb9ce3a129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textTimer: 10
+  timerPrinciple: 1
+  lemonadeMoney: 10
+--- !u!114 &7693290523440478614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e46f696b916e3418fa7ce6856b0bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balanceText: {fileID: 0}
+--- !u!114 &7693290523440478624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0144fcb1bc1114ea4f59afa6ff730f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punchyRollCost: 900
+  ownership: {fileID: 0}
+  textTimer: 10
+  timerPrinciple: 2
+  punchyMoney: 100
+--- !u!114 &7693290523440478625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6720c858ba043d641a06fb46fd2de4a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nickCost: 15000
+  ownership: {fileID: 0}
+  textTimer: 10
+  timerPrinciple: 2
+  nickMoney: 150
+--- !u!114 &7693290523440478621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceaaa5ec01475c4e867fc5eb6d1ad31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bankCost: 30000
+  ownership: {fileID: 0}
+  textTimer: 10
+  timerPrinciple: 3
+  bankMoney: 300
+--- !u!114 &7693290523440478622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c668aa6a8611054f9f5dd0d815980d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bepisCost: 30000
+  ownership: {fileID: 0}
+  textTimer: 10
+  timerPrinciple: 4
+  bepisMoney: 500
+--- !u!114 &7693290523440478623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ebd5a4be5fedf24c862ebc14570a3e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  polaCost: 100000
+  ownership: {fileID: 0}
+  textTimer: 10
+  timerPrinciple: 4
+  polaMoney: 1000
+--- !u!114 &7693290523440478616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6c9abaf1c3c424ea661bdd6952e7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carCost: 600000
+  ownership: {fileID: 0}
+  textTimer: 10
+  timerPrinciple: 4
+  carMoney: 1500
+--- !u!114 &7693290523440478617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5f29747578f524ca5c6d8ffb973acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wizneyCost: 1500000
+  ownership: {fileID: 0}
+  textTimer: 10
+  timerPrinciple: 2
+  wizneyMoney: 2000
+--- !u!114 &7693290523440478618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf5076fbef6f1d748be4d4db24924da4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damsungCost: 3000000
+  ownership: {fileID: 0}
+  textTimer: 10
+  timerPrinciple: 2
+  damsungMoney: 3000
+--- !u!114 &7693290523440478619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2324cf6cee0c26f4385dcb6c739f67fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mestleCost: 5500000
+  ownership: {fileID: 0}
+  textTimer: 10
+  timerPrinciple: 2
+  mestleMoney: 5000
+--- !u!114 &7693290523440478620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25266ed4ce63d324d94a21ad7bbd159b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bamazonCost: 25000000
+  ownership: {fileID: 0}
+  textTimer: 10
+  timerPrinciple: 4
+  bamazonMoney: 10000

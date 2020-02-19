@@ -60,7 +60,6 @@ public class BankOfSF : MonoBehaviour
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - bankCost);
             ownership.text = "Congradulations! You now own the Bank of South Florida.";
             textActive = true;
-            PlayerPrefs.SetInt("ownBank", 1);
         }
     }
 
