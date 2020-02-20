@@ -12,11 +12,6 @@ public class PlayerName : MonoBehaviour
     public void NameCorp()
     {
         PlayerPrefs.SetString("corpName", corpName.text);
-        anim.GetComponent<Animator>().SetTrigger("FadeToStart");
-    }
-
-    void LoadGame()
-    {
-        SceneManager.LoadScene("GameScreen");
+        anim.GetComponent<Animator>().SetTrigger("FadeOut");
     }
 }

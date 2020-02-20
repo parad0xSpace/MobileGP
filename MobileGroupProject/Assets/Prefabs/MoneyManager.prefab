@@ -119,7 +119,7 @@ MonoBehaviour:
   bankCost: 30000
   ownership: {fileID: 0}
   textTimer: 10
-  timerPrinciple: 3
+  timerPrinciple: 1
   bankMoney: 300
 --- !u!114 &7693290523440478622
 MonoBehaviour:
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c668aa6a8611054f9f5dd0d815980d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bepisCost: 30000
+  bepisCost: 100000
   ownership: {fileID: 0}
   textTimer: 10
   timerPrinciple: 4
@@ -150,10 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ebd5a4be5fedf24c862ebc14570a3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polaCost: 100000
+  polaCost: 300000
   ownership: {fileID: 0}
   textTimer: 10
-  timerPrinciple: 4
+  timerPrinciple: 2
   polaMoney: 1000
 --- !u!114 &7693290523440478616
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
   carCost: 600000
   ownership: {fileID: 0}
   textTimer: 10
-  timerPrinciple: 4
+  timerPrinciple: 3
   carMoney: 1500
 --- !u!114 &7693290523440478617
 MonoBehaviour:
