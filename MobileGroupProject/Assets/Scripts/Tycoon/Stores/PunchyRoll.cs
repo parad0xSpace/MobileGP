@@ -13,9 +13,21 @@ public class PunchyRoll : MonoBehaviour
     public float punchyMoney = 100f;
     bool textActive = false;
 
+    public GameObject punchyCanvas;
+    public Text punchyText;
+
     void Start()
     {
         timer = timerPrinciple;
+        punchyCanvas.gameObject.SetActive(false);
+        if(PlayerPrefs.GetInt("ownPunchyRoll") != 1)
+        {
+            punchyText.text = "PunchyRoll, a cartoon distribution service. Makes $100 per cycle. Buy for $900?";
+        }
+        else
+        {
+            punchyText.text = "PunchyRoll, a cartoon distribution service. Makes $100 per cycle.";
+        }
     }
 
     
@@ -59,8 +71,9 @@ public class PunchyRoll : MonoBehaviour
             Debug.Log("success!");
             PlayerPrefs.SetInt("ownPunchyRoll", 1);
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - punchyRollCost);
-            ownership.text = "Congradulations! You now own PunchyRoll.";
+            ownership.text = "Congratulations! You now own PunchyRoll.";
             textActive = true;
+            punchyText.text = "PunchyRoll, a cartoon distribution service. Makes $100 per cycle. Buy for $900?";
         }
     }
 
@@ -69,5 +82,17 @@ public class PunchyRoll : MonoBehaviour
         Debug.Log("$100 collected");
         timer = timerPrinciple;
         PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") + punchyMoney);
+    }
+
+    public void PressStore()
+    {
+        punchyCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void CloseCanvas()
+    {
+        punchyCanvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

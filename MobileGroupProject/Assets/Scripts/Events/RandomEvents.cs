@@ -35,19 +35,21 @@ public class RandomEvents : MonoBehaviour
         anarchyTimer = anarchyTimerPrinciple;
         nezzosTimer = nezzosTimerPrinciple;
 
-        bepisCanvas.gameObject.SetActive(false);
-        polaCanvas.gameObject.SetActive(false);
-        fcscCanvas.gameObject.SetActive(false);
-        wizneyCanvas.gameObject.SetActive(false);
-        damsungCanvas.gameObject.SetActive(false);
-        mestleCanvas.gameObject.SetActive(false);
-        bamazonCanvas.gameObject.SetActive(false);
-        warningCanvas.gameObject.SetActive(false);
-        threatCanvas.gameObject.SetActive(false);
-        uhohCanvas.gameObject.SetActive(false);
-        bankGratz.gameObject.SetActive(false);
-        congratz.gameObject.SetActive(false);
-        nezzosDefeat.gameObject.SetActive(false);
+        /*
+         * bepisCanvas.gameObject.SetActive(false);
+         * polaCanvas.gameObject.SetActive(false);
+         * fcscCanvas.gameObject.SetActive(false);
+         * wizneyCanvas.gameObject.SetActive(false);
+         * damsungCanvas.gameObject.SetActive(false);
+         * mestleCanvas.gameObject.SetActive(false);
+         * bamazonCanvas.gameObject.SetActive(false);
+         * warningCanvas.gameObject.SetActive(false);
+         * threatCanvas.gameObject.SetActive(false);
+         * uhohCanvas.gameObject.SetActive(false);
+         * bankGratz.gameObject.SetActive(false);
+         * congratz.gameObject.SetActive(false);
+         * nezzosDefeat.gameObject.SetActive(false); 
+         */
     }
 
     void Update()

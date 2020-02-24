@@ -13,9 +13,21 @@ public class Bamazon : MonoBehaviour
     public float bamazonMoney = 10000f;
     bool textActive = false;
 
+    public GameObject bamazonCanvas;
+    public Text bamazonText;
+
     void Start()
     {
         timer = timerPrinciple;
+        bamazonCanvas.gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("ownDamsung") != 1)
+        {
+            bamazonText.text = "Bamazon, a massive online retailer. Makes $10,000 per cycle. Buy for 25 million?";
+        }
+        else
+        {
+            bamazonText.text = "Bamazon, a massive online retailer. Makes $10,000 per cycle.";
+        }
     }
 
     void Update()
@@ -58,8 +70,9 @@ public class Bamazon : MonoBehaviour
             Debug.Log("success!");
             PlayerPrefs.SetInt("ownBamazon", 1);
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - bamazonCost);
-            ownership.text = "Congradulations! You now own Bamazon.";
+            ownership.text = "Congratulations! You now own Bamazon.";
             textActive = true;
+            bamazonText.text = "Bamazon, a massive online retailer. Makes $10,000 per cycle.";
         }
     }
 
@@ -73,5 +86,17 @@ public class Bamazon : MonoBehaviour
         Debug.Log("$10000 collected");
         timer = timerPrinciple;
         PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") + bamazonMoney);
+    }
+
+    public void PressStore()
+    {
+        bamazonCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void CloseCanvas()
+    {
+        bamazonCanvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

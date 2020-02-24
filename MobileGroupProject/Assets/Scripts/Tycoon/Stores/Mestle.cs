@@ -13,9 +13,21 @@ public class Mestle : MonoBehaviour
     public float mestleMoney = 5000f;
     bool textActive = false;
 
+    public GameObject mestleCanvas;
+    public Text mestleText;
+
     void Start()
     {
         timer = timerPrinciple;
+        mestleCanvas.gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("ownDamsung") != 1)
+        {
+            mestleText.text = "Mestle, a large foodstuff manufacturer. Makes $5000 per cycle. Buy for 5.5 million?";
+        }
+        else
+        {
+            mestleText.text = "Mestle, a large foodstuff manufacturer. Makes $5000 per cycle. Buy for 5.5 million?";
+        }
     }
 
     void Update()
@@ -58,8 +70,9 @@ public class Mestle : MonoBehaviour
             Debug.Log("success!");
             PlayerPrefs.SetInt("ownMestle", 1);
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - mestleCost);
-            ownership.text = "Congradulations! You now own Mestle.";
+            ownership.text = "Congratulations! You now own Mestle.";
             textActive = true;
+            mestleText.text = "Mestle, a large foodstuff manufacturer. Makes $5000 per cycle. Buy for 5.5 million?";
         }
     }
 
@@ -73,5 +86,17 @@ public class Mestle : MonoBehaviour
         Debug.Log("$3000 collected");
         timer = timerPrinciple;
         PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") + mestleMoney);
+    }
+
+    public void PressStore()
+    {
+        mestleCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void CloseCanvas()
+    {
+        mestleCanvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

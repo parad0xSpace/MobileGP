@@ -13,9 +13,21 @@ public class Bepis : MonoBehaviour
     public float bepisMoney = 500f;
     bool textActive = false;
 
+    public GameObject bepisCanvas;
+    public Text bepisText;
+
     void Start()
     {
         timer = timerPrinciple;
+        bepisCanvas.gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("ownBepis") != 1)
+        {
+            bepisText.text = "Bepis, a well-known cola soda brand, among other things. Makes $500 per cycle. Buy for $100,000?";
+        }
+        else
+        {
+            bepisText.text = "Bepis, a well-known cola soda brand, among other things. Makes $500 per cycle. ";
+        }
     }
 
     void Update()
@@ -58,8 +70,9 @@ public class Bepis : MonoBehaviour
             Debug.Log("success!");
             PlayerPrefs.SetInt("ownBepis", 1);
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - bepisCost);
-            ownership.text = "Congradulations! You now own Bepis.";
+            ownership.text = "Congratulations! You now own Bepis.";
             textActive = true;
+            bepisText.text = "Bepis, a well-known cola soda brand, among other things.";
         }
     }
 
@@ -76,5 +89,17 @@ public class Bepis : MonoBehaviour
 
         timer = timerPrinciple;
         PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") + bepisMoney);
+    }
+
+    public void PressStore()
+    {
+        bepisCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void CloseCanvas()
+    {
+        bepisCanvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

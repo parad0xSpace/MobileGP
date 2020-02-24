@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7693290523440478612}
-  - component: {fileID: 7693290523440478613}
   - component: {fileID: 7693290523440478614}
+  - component: {fileID: 7693290523440478613}
   - component: {fileID: 7693290523440478624}
   - component: {fileID: 7693290523440478625}
   - component: {fileID: 7693290523440478621}
@@ -42,6 +42,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7693290523440478614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693290523440478626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e46f696b916e3418fa7ce6856b0bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balanceText: {fileID: 0}
 --- !u!114 &7693290523440478613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,19 +70,8 @@ MonoBehaviour:
   textTimer: 10
   timerPrinciple: 1
   lemonadeMoney: 10
---- !u!114 &7693290523440478614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7693290523440478626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4e46f696b916e3418fa7ce6856b0bd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balanceText: {fileID: 0}
+  lemonadeText: {fileID: 0}
+  lemonadeCanvas: {fileID: 0}
 --- !u!114 &7693290523440478624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +89,8 @@ MonoBehaviour:
   textTimer: 10
   timerPrinciple: 2
   punchyMoney: 100
+  punchyCanvas: {fileID: 0}
+  punchyText: {fileID: 0}
 --- !u!114 &7693290523440478625
 MonoBehaviour:
   m_ObjectHideFlags: 0

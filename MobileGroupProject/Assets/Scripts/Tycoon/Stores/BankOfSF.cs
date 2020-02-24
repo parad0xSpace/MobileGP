@@ -13,9 +13,21 @@ public class BankOfSF : MonoBehaviour
     public float bankMoney = 300f;
     bool textActive = false;
 
+    public GameObject bankCanvas;
+    public Text bankText;
+
     void Start()
     {
         timer = timerPrinciple;
+        bankCanvas.gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("ownBank") != 1)
+        {
+            bankText.text = "The Bank of South Florida. Makes $300 per cycle. Buy for $30,000?";
+        }
+        else
+        {
+            bankText.text = "The Bank of South Florida. Makes $300 per cycle.";
+        }
     }
 
     void Update()
@@ -58,8 +70,9 @@ public class BankOfSF : MonoBehaviour
             Debug.Log("success!");
             PlayerPrefs.SetInt("ownBank", 1);
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - bankCost);
-            ownership.text = "Congradulations! You now own the Bank of South Florida.";
+            ownership.text = "Congratulations! You now own the Bank of South Florida.";
             textActive = true;
+            bankText.text = "The Bank of South Florida. Makes $300 per cycle.";
         }
     }
 
@@ -68,5 +81,17 @@ public class BankOfSF : MonoBehaviour
         Debug.Log("$300 collected");
         timer = timerPrinciple;
         PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") + bankMoney);
+    }
+
+    public void PressStore()
+    {
+        bankCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void CloseCanvas()
+    {
+        bankCanvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

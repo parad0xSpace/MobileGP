@@ -13,9 +13,21 @@ public class FCSC : MonoBehaviour
     public float carMoney = 1500f;
     bool textActive = false;
 
+    public GameObject carCanvas;
+    public Text carText;
+
     void Start()
     {
         timer = timerPrinciple;
+        carCanvas.gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("ownCar") != 1)
+        {
+            carText.text = "Fast Car Space Ship Company, aka FCSC, a luxury car brand. Makes $1500 per cycle. Buy for $600,000?";
+        }
+        else
+        {
+            carText.text = "Fast Car Space Ship Company, aka FCSC, a luxury car brand. Makes $1500 per cycle.";
+        }
     }
 
     void Update()
@@ -58,7 +70,7 @@ public class FCSC : MonoBehaviour
             Debug.Log("success!");
             PlayerPrefs.SetInt("ownCar", 1);
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - carCost);
-            ownership.text = "Congradulations! You now own the Fast Car Spaceship Company.";
+            ownership.text = "Congratulations! You now own the Fast Car Spaceship Company.";
             textActive = true;
         }
     }
@@ -72,5 +84,18 @@ public class FCSC : MonoBehaviour
         Debug.Log("$1500 collected");
         timer = timerPrinciple;
         PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") + carMoney);
+        carText.text = "Fast Car Space Ship Company, aka FCSC, a luxury car brand. Makes $1500 per cycle.";
+    }
+
+    public void PressStore()
+    {
+        carCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void CloseCanvas()
+    {
+        carCanvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

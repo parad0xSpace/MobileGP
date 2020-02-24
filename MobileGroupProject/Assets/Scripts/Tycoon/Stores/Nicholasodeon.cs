@@ -13,9 +13,21 @@ public class Nicholasodeon : MonoBehaviour
     public float nickMoney = 150f;
     bool textActive = false;
 
+    public GameObject nickCanvas;
+    public Text nickText;
+
     void Start()
     {
         timer = timerPrinciple;
+        nickCanvas.gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("ownNick") != 1)
+        {
+            nickText.text = "Nicholasodeon, a cartoon production studio. Makes $150 per cycle. Buy for $15000?";
+        }
+        else
+        {
+            nickText.text = "Nicholasodeon, a cartoon production studio. Makes $150 per cycle.";
+        }
     }
 
     void Update()
@@ -58,8 +70,9 @@ public class Nicholasodeon : MonoBehaviour
             Debug.Log("success!");
             PlayerPrefs.SetInt("ownNick", 1);
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - nickCost);
-            ownership.text = "Congradulations! You now own Nickolasodeon.";
+            ownership.text = "Congratulations! You now own Nickolasodeon.";
             textActive = true;
+            nickText.text = "Nicholasodeon, a cartoon production studio. Makes $150 per cycle.";
         }
     }
 
@@ -68,5 +81,17 @@ public class Nicholasodeon : MonoBehaviour
         Debug.Log("$150 collected");
         timer = timerPrinciple;
         PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") + nickMoney);
+    }
+
+    public void PressStore()
+    {
+        nickCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void CloseCanvas()
+    {
+        nickCanvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

@@ -10,10 +10,15 @@ public class LemonadeStand : MonoBehaviour
     public float timerPrinciple = 2f;
     float timer;
     public float lemonadeMoney = 10f;
-    
+
+    public Text lemonadeText;
+    public GameObject lemonadeCanvas;
+
     void Start()
     {
         timer = timerPrinciple;
+        lemonadeCanvas.gameObject.SetActive(false);
+        lemonadeText.text = PlayerPrefs.GetString("corpName") + " Lemonade Stand. It makes $10 per cycle.";
     }
 
     
@@ -37,5 +42,18 @@ public class LemonadeStand : MonoBehaviour
         Debug.Log("$10 collected");
         PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") + lemonadeMoney);
         timer = timerPrinciple;
-    } 
+    }
+
+    public void PressStore()
+    {
+        lemonadeCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void CloseCanvas()
+    {
+        lemonadeCanvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
 }
+

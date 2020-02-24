@@ -13,9 +13,21 @@ public class Damsung : MonoBehaviour
     public float damsungMoney = 3000f;
     bool textActive = false;
 
+    public GameObject damsungCanvas;
+    public Text damsungText;
+
     void Start()
     {
         timer = timerPrinciple;
+        damsungCanvas.gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("ownDamsung") != 1)
+        {
+            damsungText.text = "Damsung, a large technology company. Makes $3000 per cycle. Buy for 3 million?";
+        }
+        else
+        {
+            damsungText.text = "Damsung, a large technology company. Makes $3000 per cycle.";
+        }
     }
 
     void Update()
@@ -58,8 +70,9 @@ public class Damsung : MonoBehaviour
             Debug.Log("success!");
             PlayerPrefs.SetInt("ownDamsung", 1);
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - damsungCost);
-            ownership.text = "Congradulations! You now own Damsung.";
+            ownership.text = "Congratulations! You now own Damsung.";
             textActive = true;
+            damsungText.text = "Damsung, a large technology company. Makes $3000 per cycle.";
         }
     }
 
@@ -78,5 +91,17 @@ public class Damsung : MonoBehaviour
         Debug.Log("$3000 collected");
         timer = timerPrinciple;
         PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") + damsungMoney);
+    }
+
+    public void PressStore()
+    {
+        damsungCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void CloseCanvas()
+    {
+        damsungCanvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

@@ -13,9 +13,21 @@ public class PocaPola : MonoBehaviour
     public float polaMoney = 1000f;
     bool textActive = false;
 
+    public GameObject polaCanvas;
+    public Text polaText;
+
     void Start()
     {
         timer = timerPrinciple;
+        polaCanvas.gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("ownPola") != 1)
+        {
+            polaText.text = "Poca Pola, a well-known cola soda brand, among other things. Makes $1000 per cycle. Buy for $300,000?";
+        }
+        else
+        {
+            polaText.text = "Poca Pola, a well-known cola soda brand, among other things. Makes $1000 per cycle.";
+        }
     }
 
     void Update()
@@ -58,7 +70,7 @@ public class PocaPola : MonoBehaviour
             Debug.Log("success!");
             PlayerPrefs.SetInt("ownPola", 1);
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - polaCost);
-            ownership.text = "Congradulations! You now own Poca Pola.";
+            ownership.text = "Congratulations! You now own Poca Pola.";
             textActive = true;
         }
     }
@@ -78,5 +90,17 @@ public class PocaPola : MonoBehaviour
         Debug.Log("$1000 collected");
         timer = timerPrinciple;
         PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") + polaMoney);
+    }
+
+    public void PressStore()
+    {
+        polaCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void CloseCanvas()
+    {
+        polaCanvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

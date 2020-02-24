@@ -13,9 +13,21 @@ public class Wizney : MonoBehaviour
     public float wizneyMoney = 2000f;
     bool textActive = false;
 
+    public GameObject wizCanvas;
+    public Text wizText;
+
     void Start()
     {
         timer = timerPrinciple;
+        wizCanvas.gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("ownWizney") != 1)
+        {
+            wizText.text = "Wizney, a large entertainment empire. Makes $2000 per cycle. Buy for 1.5 million?";
+        }
+        else
+        {
+            wizText.text = "Wizney, a large entertainment empire. Makes $2000 per cycle. Buy for 1.5 million?";
+        }
     }
 
     void Update()
@@ -58,8 +70,9 @@ public class Wizney : MonoBehaviour
             Debug.Log("success!");
             PlayerPrefs.SetInt("ownWizney", 1);
             PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") - wizneyCost);
-            ownership.text = "Congradulations! You now own Wizney.";
+            ownership.text = "Congratulations! You now own Wizney.";
             textActive = true;
+            wizText.text = "Wizney, a large entertainment empire. Makes $2000 per cycle. Buy for 1.5 million?";
         }
     }
 
@@ -72,5 +85,18 @@ public class Wizney : MonoBehaviour
         Debug.Log("$2000 collected");
         timer = timerPrinciple;
         PlayerPrefs.SetFloat("currentMoney", PlayerPrefs.GetFloat("currentMoney") + wizneyMoney);
+        wizText.text = "Wizney, a large entertainment empire. Makes $2000 per cycle. Buy for 1.5 million?";
+    }
+
+    public void PressStore()
+    {
+        wizCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void CloseCanvas()
+    {
+        wizCanvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }
