@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3030237858379949144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4480098583092785632}
+  - component: {fileID: 9023173476862784547}
+  - component: {fileID: 3591685895161031264}
+  - component: {fileID: 9140769729462336183}
+  - component: {fileID: 7659638705595203154}
+  m_Layer: 0
+  m_Name: EventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4480098583092785632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030237858379949144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9023173476862784547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030237858379949144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 968f406a2b5be0b4aa9383897e48cc95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corpTimerPrinciple: 300
+  anarchyTimerPrinciple: 600
+  nezzosTimerPrinciple: 200
+  bepisCanvas: {fileID: 0}
+  polaCanvas: {fileID: 0}
+  fcscCanvas: {fileID: 0}
+  wizneyCanvas: {fileID: 0}
+  damsungCanvas: {fileID: 0}
+  mestleCanvas: {fileID: 0}
+  bamazonCanvas: {fileID: 0}
+  warningCanvas: {fileID: 0}
+  threatCanvas: {fileID: 0}
+  uhohCanvas: {fileID: 0}
+  bankGratz: {fileID: 0}
+  congratz: {fileID: 0}
+  nezzosDefeat: {fileID: 0}
+--- !u!114 &3591685895161031264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030237858379949144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbec45836e92e94b9d42ccad1f0471e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warningCanvas: {fileID: 0}
+  threatCanvas: {fileID: 0}
+  uhohCanvas: {fileID: 0}
+  badEnd: {fileID: 0}
+--- !u!114 &9140769729462336183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030237858379949144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e78cc95e422f784da0f2e8c8bcb9389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bepisCanvas: {fileID: 0}
+  polaCanvas: {fileID: 0}
+  fcscCanvas: {fileID: 0}
+  wizneyCanvas: {fileID: 0}
+  damsungCanvas: {fileID: 0}
+  mestleCanvas: {fileID: 0}
+  bamazonCanvas: {fileID: 0}
+--- !u!114 &7659638705595203154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030237858379949144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3a568e26f1c344c9b24f45af92b48e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bankGratz: {fileID: 0}
+  congratz: {fileID: 0}
+  nezzosDefeat: {fileID: 0}

@@ -9,20 +9,14 @@ public class Scroll : MonoBehaviour
     public float minZoomOut = 1f;
     public float maxZoomOut = 8f;
 
-    void Start()
+    void LateUpdate()
     {
-        
-    }
-
-    
-    void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
 
-        if(Input.touchCount == 2)
+        if (Input.touchCount == 2)
         {
             Touch touchZero = Input.GetTouch(0);
             Touch touchOne = Input.GetTouch(1);
@@ -37,7 +31,7 @@ public class Scroll : MonoBehaviour
 
             Zoom(difference * 0.01f);
         }
-        else if(Input.GetMouseButton(0))
+        else if (Input.GetMouseButton(0))
         {
             Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Camera.main.transform.position += direction;
