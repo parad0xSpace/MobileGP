@@ -16,19 +16,91 @@ public class AnarchyEventButtons : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void WTwo()
+    {
+
+    }
+
+    public void WThree()
+    {
+
+    }
+
+    public void WFour()
+    {
+
+    }
+
+    public void WarningEnd()
+    {
+        Time.timeScale = 1;
+    }
+
     public void Threatened()
     {
         threatCanvas.gameObject.SetActive(false);
+        
+    }
+
+    public void TTwo()
+    {
+
+    }
+
+    public void TThree()
+    {
+
+    }
+
+    public void TFour()
+    {
+
+    }
+
+    public void TFive()
+    {
+
+    }
+
+    public void TSix()
+    {
+
+    }
+
+    public void CloseT()
+    {
         Time.timeScale = 1;
     }
 
     public void TrueEnd()
     {
         uhohCanvas.gameObject.SetActive(false);
-        Time.timeScale = 1;
-        badEnd.gameObject.GetComponent<Animator>().SetTrigger("Burn");
     }
 
+    public void TETwo()
+    {
+
+    }
+
+    public void TEThree()
+    {
+
+    }
+
+    public void TEFour()
+    {
+
+    }
+
+    public void TEFive()
+    {
+
+    }
+
+    public void ThisIsTheEnd()
+    {
+        badEnd.gameObject.GetComponent<Animator>().SetTrigger("Burn");
+    }
     void LoadLose()
     {
         //load lose scene

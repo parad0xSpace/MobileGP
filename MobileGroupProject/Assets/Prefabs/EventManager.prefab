@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3591685895161031264}
   - component: {fileID: 9140769729462336183}
   - component: {fileID: 7659638705595203154}
+  - component: {fileID: 5897629361377077286}
+  - component: {fileID: 3415720961654880046}
   m_Layer: 0
   m_Name: EventManager
   m_TagString: Untagged
@@ -112,3 +114,41 @@ MonoBehaviour:
   bankGratz: {fileID: 0}
   congratz: {fileID: 0}
   nezzosDefeat: {fileID: 0}
+--- !u!114 &5897629361377077286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030237858379949144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a93419e811a0cb4a902cad6f565c1c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialTextOne: {fileID: 0}
+  tutorialTextTwo: {fileID: 0}
+  anarchyTextOne: {fileID: 0}
+  anarchyTextTwo: {fileID: 0}
+  nezzosTextOne: {fileID: 0}
+  nezzosTextTwo: {fileID: 0}
+  nezzosTextThree: {fileID: 0}
+--- !u!114 &3415720961654880046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030237858379949144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2b62789beb2ee488691f4dc68a984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineOne: {fileID: 0}
+  lineTwo: {fileID: 0}
+  lineThree: {fileID: 0}
+  lineFour: {fileID: 0}
+  lineFive: {fileID: 0}
+  lineSix: {fileID: 0}
+  lineSeven: {fileID: 0}
