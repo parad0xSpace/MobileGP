@@ -7,6 +7,11 @@ public class InitializeBalance : MonoBehaviour
 {
     public Text balanceText;
 
+    void Start()
+    {
+        PlayerPrefs.SetInt("PrevPlay", 1);
+    }
+
     void Update()
     {
         if (PlayerPrefs.GetFloat("currentMoney") > 999999999999f)

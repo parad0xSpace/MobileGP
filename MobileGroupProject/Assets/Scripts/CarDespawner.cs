@@ -10,4 +10,12 @@ public class CarDespawner : MonoBehaviour
      *      destroy collision.gameobject (the car)
      * 
      */
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Car")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }

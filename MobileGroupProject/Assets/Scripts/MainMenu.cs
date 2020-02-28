@@ -23,7 +23,6 @@ public class MainMenu : MonoBehaviour
     public void NewGame()
     {
         PlayerPrefs.DeleteAll();
-        PlayerPrefs.SetInt("PrevPlay", 1);
         anim.GetComponent<Animator>().SetTrigger("NameFade");
     }
 
