@@ -114,8 +114,4 @@ public class AnarchyEventButtons : MonoBehaviour
         endFive.gameObject.SetActive(false);
         badEnd.gameObject.GetComponent<Animator>().SetTrigger("Burn");
     }
-    void LoadLose()
-    {
-        //load lose scene
-    }
 }

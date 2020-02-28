@@ -80,7 +80,7 @@ public class Wizney : MonoBehaviour
     {
         if(PlayerPrefs.GetInt("wizneyBad") == 1)
         {
-            timerPrinciple = 1f;
+            timerPrinciple = 0.75f;
         }
         Debug.Log("$2000 collected");
         timer = timerPrinciple;

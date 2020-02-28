@@ -84,7 +84,7 @@ public class Bepis : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("bepisGood") == 1)
         {
-            timerPrinciple = 3.5f;
+            timerPrinciple = 1f;
         }
 
         timer = timerPrinciple;

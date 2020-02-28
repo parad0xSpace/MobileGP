@@ -14,7 +14,6 @@ public class TutorialCanvases : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetInt("tutorial", 0);
         lineOne.gameObject.SetActive(false);
         lineTwo.gameObject.SetActive(false);
         lineThree.gameObject.SetActive(false);

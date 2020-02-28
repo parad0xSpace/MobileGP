@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NezzosEvents : MonoBehaviour
 {
-    public GameObject bankGratz;
+    /*public GameObject bankGratz;
     public GameObject congratz;
     public GameObject nezzosDefeat;
 
@@ -25,5 +25,5 @@ public class NezzosEvents : MonoBehaviour
     {
         nezzosDefeat.gameObject.SetActive(false);
         Time.timeScale = 1;
-    }
+    }*/
 }

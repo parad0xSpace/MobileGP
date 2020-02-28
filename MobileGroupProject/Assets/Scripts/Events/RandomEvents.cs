@@ -33,7 +33,7 @@ public class RandomEvents : MonoBehaviour
     {
         corpTimer = corpTimerPrinciple;
         anarchyTimer = anarchyTimerPrinciple;
-        nezzosTimer = nezzosTimerPrinciple;
+        //nezzosTimer = nezzosTimerPrinciple;
         
         bepisCanvas.gameObject.SetActive(false);
         polaCanvas.gameObject.SetActive(false);
@@ -67,19 +67,19 @@ public class RandomEvents : MonoBehaviour
             }
         }
 
-        if(PlayerPrefs.GetInt("ownBank") == 1)
+        /*if(PlayerPrefs.GetInt("ownBank") == 1)
         {
             nezzosTimer -= Time.deltaTime;
             if(nezzosTimer < 0)
             {
                 NezzosEvent();
             }
-        }
+        }*/
 
-        if(PlayerPrefs.GetInt("ownBamazon") == 1)
+        /*if(PlayerPrefs.GetInt("ownBamazon") == 1)
         {
             NezzosEvent();
-        }
+        }*/
     }
 
     void CorperateEvent()
@@ -200,7 +200,7 @@ public class RandomEvents : MonoBehaviour
         }
     }
 
-    void NezzosEvent()
+    /*void NezzosEvent()
     {
         if (PlayerPrefs.GetInt("ownBamazon") == 1 && PlayerPrefs.GetInt("nezzosDefeated") != 1)
         {
@@ -224,5 +224,5 @@ public class RandomEvents : MonoBehaviour
         {
             return;
         }
-    }
+    }*/
 }

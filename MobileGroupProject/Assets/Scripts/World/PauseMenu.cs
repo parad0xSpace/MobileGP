@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseCanvas;
-    public Animator anim;
 
     void Start()
     {
@@ -17,11 +16,6 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 0;
         pauseCanvas.gameObject.SetActive(true);
-    }
-
-    public void MainMenu()
-    {
-        anim.GetComponent<Animator>().SetTrigger("Fade");
     }
 
     public void Resume()

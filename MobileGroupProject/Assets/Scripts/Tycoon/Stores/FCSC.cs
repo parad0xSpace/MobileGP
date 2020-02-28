@@ -79,7 +79,7 @@ public class FCSC : MonoBehaviour
     {
         if(PlayerPrefs.GetInt("carBad") == 1)
         {
-            timerPrinciple = 3f;
+            timerPrinciple = 2f;
         }
         Debug.Log("$1500 collected");
         timer = timerPrinciple;
